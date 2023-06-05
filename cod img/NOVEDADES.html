@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  
+body{
+	background-image:url(imagenes/fond1.png);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+	color:#FF9900
+}
+    .contenedor {
+      position: relative;
+      width: 600px; 
+      height: 400px; 
+    }
+
+    .imagen {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 130%; 
+      height: 140%;
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+
+    .imagen.mostrar {
+      opacity: 1;
+    }
+  </style>
+  <script> // script de JavaScript se utiliza es evento "DOMContentLoaded" para esperar a que el documento se cargue completamente antes de iniciar el script
+    document.addEventListener("DOMContentLoaded", function() {
+      var imagenes = document.querySelectorAll(".imagen");
+      var intervalo = 2000; // Intervalo de tiempo en milisegundos para cambiar las imágenes
+      var indice = 0;
+
+      function mostrarSiguienteImagen() {
+        imagenes[indice].classList.remove("mostrar");
+        indice = (indice + 1) % imagenes.length;
+        imagenes[indice].classList.add("mostrar");
+      }
+
+      // Mostrar la primera imagen inicialmente
+      imagenes[indice].classList.add("mostrar");
+
+      // Cambiar las imágenes automáticamente cada cierto intervalo de tiempo
+      setInterval(mostrarSiguienteImagen, intervalo);
+    });
+  </script>
+</head>
+<body>
+<div style="color:#E95907; font-weight:bold; text-align:justify; font-size:70px; font-family:Arial; margin-left: 6cm; margin-right: 20%; ">
+<SPAN style="color:#E95907">NOVEDADES</SPAN>
+  <div class="contenedor">
+    <img class="imagen" src="imagenes/1.png" alt="Imagen 1">
+    <img class="imagen" src="imagenes/2.png" alt="Imagen 2">
+    <img class="imagen" src="imagenes/3.png" alt="Imagen 3">
+    <img class="imagen" src="imagenes/4.png" alt="Imagen 4">
+    <img class="imagen" src="imagenes/5.png" alt="Imagen 5">
+  </div>
+</body>
+</html>

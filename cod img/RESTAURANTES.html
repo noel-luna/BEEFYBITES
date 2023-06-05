@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Restaurantes</title>
+</head>
+<style>
+
+body{
+	background-image:url(imagenes/restaurantes.webp);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+	color:#FF9900
+}
+/* Estilos para la imagen */
+    .imagen-opacidad {
+      opacity: 0.5; /* Opacidad inicial de la imagen */
+      transition: opacity 0.5s; /* Transición suave de 0.5 segundos */
+    }
+
+    /* Estilos para la imagen cuando se pasa el ratón por encima */
+    .imagen-opacidad:hover {
+      opacity: 1; /* Opacidad completa al pasar el ratón por encima */
+    }
+	 .contenedor {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Ajusta la altura del contenedor según tus necesidades */
+	  position: relative;
+      width: 470px;
+      height: 250px;
+    }
+	/*Estilos para el boton*/
+	.boton {
+  background-color: #DF8231;
+  border: double;
+  color: white;
+  padding: 16px 34px;/*top, left*/
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  text-decoration: none;
+  cursor: pointer;
+  width: 370px;
+  height: -220px;
+}
+
+/*opacidad del boton*/
+.boton:hover {
+	opacity: 1;
+}
+
+	
+</style>
+<body>
+<div style="color:#E95907; font-weight:bold; text-align:justify; font-size:45px; font-family:Cursive; margin-left: 6cm; margin-right: 20%; ">
+<SPAN style="color:#E95907">Restaurantes:</SPAN>
+<div style="color:#FC973E; font-weight:bold; text-align:justify; font-size:30px; font-family:Cursive; margin-left: 6cm; margin-right: 20%; ">
+<SPAN style="color:#FC973E">Nos encontramos en diversas ubicaciones para que nuestro sabor llegue a muchos lugares.
+Te esperamos en:</SPAN>
+<div class="contenedor">
+   <img class="imagen-opacidad" src="imagenes/img1.jpg" alt="Imagen" width="300" height="200"/>
+    <img class="imagen-opacidad" src="imagenes/img2.jpg" alt="Imagen" width="300" height="200"/>
+	 <img class="imagen-opacidad" src="imagenes/img3.jpg" alt="Imagen" width="300" height="200"/>
+</div>	 
+	 <a href="https://goo.gl/maps/a7jHSfCGa4SQSRs16"><input type="button" class="boton" value="¡¡¡ENCUENTRANOS!!!"></a>
+</div>	
+</div> 
+</body>
+</html>

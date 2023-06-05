@@ -1,0 +1,312 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: white;
+}
+/*estilo de la pagina*/
+#contenedor{
+    width: 100%;
+    margin: 0;
+    text-align: justify;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/*estilo de la cabecera*/
+#contenedor header{
+    background: #FFB522;
+    width: 100%;
+    height: 50px;
+    padding: 0 20px;
+    position: fixed;
+    z-index: 100;
+}
+
+/*estilo del logo*/
+#contenedor .logo img{
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    float: left;
+}
+
+/*estilo de BEEFYBITES*/
+#contenedor .name ul{
+    width: 130px;
+    height: 50px;
+    float: left;
+    margin: 0;
+    padding: 5px;
+}
+#contenedor .name  ul li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+   
+    
+}
+#contenedor .name  ul li a{
+    text-decoration: none;
+    font-size: 26px;
+    font-family: Times;
+    font-weight: bold;
+    color: #421212;
+    margin: 5px 2px;
+    padding: 0;
+
+}
+
+#contenedor .name  ul :hover{
+    animation-duration: 1s;
+    animation-name: mover;
+}
+@keyframes mover{
+    from{
+        margin-left: 20px;
+        width: 10px;
+    }
+    to{
+        margin-left: 0;
+        width: 5px;
+    }
+}
+/*estilo del menu*/
+#contenedor .menu nav{
+    float: right;
+    margin: 13px 0;
+}
+
+#contenedor .menu nav ul li{
+    float: left;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#contenedor .menu nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-family: Verdana;
+    margin: 0px;
+    padding: 3px 10px;
+}
+
+#contenedor .menu nav li :hover{
+    background: #f8ce7b;
+    color: #421212;
+    border-radius: 10px;
+    transition: all 0.5s ease 0.1s;
+}
+
+#contenedor #check{
+    display: none;
+    margin: 0;
+    
+}
+#contenedor .menu label{
+    padding: 5px 10px;
+    margin: 0;
+}
+#contenedor .btn{
+    color: white;
+    font-size: 25px;
+    float: right;
+    margin: 0;
+    cursor: pointer;
+    display: none;
+}
+#contenedor .btn:hover{
+    margin: 0;
+    background: rgb(253, 200, 101);
+}
+/*media query para tablet*/
+@media screen and (max-width: 800px){
+    #contenedor .logo img{
+        width: 50px;
+        height: 50px;
+        margin: 0;
+    }
+    #contenedor .name ul li a{
+        font-size: 25px;
+    }
+s    #contenedor .name ul li{
+        margin: 0;
+        padding: 2px;
+    }
+    #contenedor .menu nav ul li a{
+        font-size: 12px;
+    }
+}
+/*media  query del menu para celular*/
+@media screen and (max-width: 648px){
+    
+    #contenedor .logo img{
+        width: 40px;
+        height: 40px;
+        margin: 5px 0 0 15px ;
+    }
+    #contenedor .name ul li a{
+        font-size: 23px;
+    }
+    #contenedor .name ul li{
+        margin: 4px 0 0 0;
+    }
+    #contenedor .menu nav ul{
+        display: flex;
+        flex-direction: column;
+        position:fixed;
+        padding: 0;
+        width: 100%;
+        height: 100vh;
+        background: #421212;
+        top: 50px;
+        left: -100%;
+        transition: all .5s;
+    }
+    #contenedor .menu nav ul li{
+        width: 100px;
+        height: 30px;
+        margin: 10px 30px;
+        float: left;
+    }
+    #contenedor .menu nav ul li a{
+        font-size: 16px;
+    }
+    #contenedor .btn{
+        display: block;
+    }
+    #check:checked ~ nav ul{
+        left: 0;
+    }
+    #contenedor .carrucel{
+        display: block;
+    }
+    #contenedor .icons a{
+        font-size: 15px;
+        padding: 0;
+        margin: 3px;
+        border-radius: 5px;
+    }
+    
+}
+
+/*aqui termina el estilo del menu*/
+
+/*estilo de la pagina principal(main)*/
+/*estilo del carrucel*/
+#contenedor main {
+    width: 100%;
+    
+}
+
+#contenedor main .carrucel img{
+    height: 500px;
+}
+
+/*aqui termina el estilo de main*/
+
+/* aqui empiza el estilo de footer*/
+#contenedor footer{
+    background: #FFB522;
+    width: 100%;
+    margin: 0;
+    padding: 0px 15px;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#contenedor footer .name2{
+    margin: 0px;
+    padding: 5px;
+    float: left;
+}
+footer .name2 h3{
+    margin: 0;
+    padding: 0;
+}
+footer .name2 a{
+    text-decoration: none;
+    font-size: 33px;
+    font-family: times;
+    font-weight: bold;
+    color: #421212;
+    margin: 0;
+    padding: 5px;
+}
+
+footer h2{
+    color: white;
+    font-size: 22px;
+    font-family:Georgia;
+    font-weight: bold;
+    margin: 0;
+    padding: 5px;
+    
+}
+
+footer article{
+    width: 100%;
+    padding: 15px;
+}
+
+footer article section{
+    width: 250px;
+    margin: 0px;
+    padding: 10px;
+    float: left;
+}
+
+footer article section h3{
+    color: white;
+    font-size: 17px;
+    font-family: verdana;
+    font-weight: bold;
+    margin: 0;
+    padding: 3px;
+}
+footer article section  p{
+    font-size: 15px;
+    font-family: verdana;
+    margin: 0px;
+    padding: 0;
+}
+footer article section a{
+    color: white;
+    font-size: 15px;
+    font-family: verdana;
+    margin: 0px;
+    padding: 0;
+    text-decoration: none;
+
+}
+footer .links p:hover{
+    color: #421212;
+}
+footer article section a:hover{
+    color: #421212;
+}
+
+footer .icons a i{
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+    margin: 7px 3px;
+    border-radius: 5px;
+
+}
+footer .icons a i:hover{
+    background: #f8ce7b;
+}
+footer section p{
+    font-size: 11px;
+    font-family: verdana;
+    color: white;
+    margin-right: 25px;
+
+}
